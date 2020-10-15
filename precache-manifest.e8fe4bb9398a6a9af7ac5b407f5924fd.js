@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "14b76bdadc88fb648639",
-    "url": "/portfolio_website/static/css/main.d317dcae.chunk.css"
+    "revision": "6ddf1be119ff4028029a",
+    "url": "/portfolio_website/static/css/main.ba9158a5.chunk.css"
   },
   {
-    "revision": "14b76bdadc88fb648639",
-    "url": "/portfolio_website/static/js/main.14b76bda.chunk.js"
+    "revision": "6ddf1be119ff4028029a",
+    "url": "/portfolio_website/static/js/main.6ddf1be1.chunk.js"
   },
   {
     "revision": "98327c965e1d89457cdd",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/portfolio_website/static/media/slack-original.bd4a3d92.svg"
   },
   {
-    "revision": "734e3d7764fe5f770d6615e505068437",
+    "revision": "9eb390e4a0a4ceebf8f05298c941605d",
     "url": "/portfolio_website/index.html"
   }
 ];
