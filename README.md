@@ -1,8 +1,4 @@
-# React With Smooth Scrolling
-
-![React with Smooth Scrolling](./images/cover.png)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal portfolio page!
 
 ## To Run
 
