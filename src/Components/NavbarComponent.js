@@ -3,6 +3,19 @@ import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      opened: false
+    }
+  }
+
+  toggle() {
+    this.setState({
+      opened: !this.state.opened
+    });
+  }
+
   scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -15,9 +28,13 @@ export default class Navbar extends Component {
             src={logo}
             className="nav-logo"
             alt="Logo"
-            onClick={this.scrollToTop}
+            onClick={this.toggle.bind(this)}
           />
-          <ul className="nav-items">
+          <ul
+              className={
+                "nav-items " + (this.state.opened ? "opened" : "closed")
+              }
+          >
             <li className="nav-item">
               <Link
                 activeClass="active"

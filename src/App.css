@@ -30,6 +30,10 @@
   height: 100%;
 }
 
+.nav-items {
+  display: flex;
+}
+
 .nav-item {
   display: inline;
   margin-left: 2rem;
@@ -59,4 +63,35 @@
   display: inline-block;
   height: 60px;
   width: 60px;
+}
+
+.toggle {
+  display: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .nav {
+    height: auto; /* overrides the height of 80px set for large screens */
+    background-color: white;
+  }
+  .nav-content {
+    flex-direction: column;
+  }
+
+  .nav-items.closed {
+    /* when toggled, hide the main nav*/
+    display: none;
+  }
+
+  .nav-items.opened {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle {
+    display: block;
+  }
 }
