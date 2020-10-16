@@ -1,6 +1,6 @@
 import React from "react";
-import { Document, Page, pdfjs  } from 'react-pdf';
-import cv_file from "./TD_cv.pdf";
+import my_photo from "../Images/my_photoPNG.PNG"
+import AboutMeCarouselComponent from "./AboutMeCarouselComponent";
 import postgres_logo from "../icons/postgresql/postgresql-original.svg";
 import bitbucket_logo from "../icons/bitbucket/bitbucket-original.svg";
 import bootstrap_logo from "../icons/bootstrap/bootstrap-plain.svg";
@@ -16,8 +16,6 @@ import linux_logo from "../icons/linux/linux-original.svg";
 import pycharm_logo from "../icons/pycharm/pycharm-original.svg";
 import python_logo from "../icons/python/python-original.svg";
 import slack_logo from "../icons/slack/slack-original.svg";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
 
@@ -37,14 +35,10 @@ export default function AboutMe() {
     return (
         <div className="AboutMe">
             <div className="section-content">
-                <h1>About Me</h1>
-                <p>Hi, my name is Tomasz and this is my personal webpage/portfolio</p>
-                <p>Below you can find my curriculum vitae</p>
-                <Document
-                    file={cv_file}
-                >
-                    <Page pageNumber={1} />
-                </Document>
+                <h1>Hi, I'm Tomasz</h1>
+                <img src={my_photo} height={300} className="my-photo"/>
+                <p>A delevoper from Gdańsk, Poland. I love creating products, that people can benefit from</p>
+                <AboutMeCarouselComponent />
                 <h1>Technologies</h1>
                 {create_table()}
             </div>

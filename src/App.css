@@ -16,6 +16,19 @@
   width: 60px;
 }
 
+.agh-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  float: right;
+}
+
 .nav-logo:hover {
   cursor: pointer;
 }
@@ -54,7 +67,7 @@
 }
 
 .section-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
 }
@@ -95,3 +108,4 @@
     display: block;
   }
 }
+

@@ -22,6 +22,12 @@ export default function MyProjects() {
                       from scratch. In order to do that, whole data pipeline was created, database was designed and
                       implemented.
                   </p>
+                  <h1>Jeppesen, a Boeing Company</h1>
+                  <p>
+                      Started this April, I'm part of a team, that is responsible for obstacle data management system.
+                      We gather information about obstacles around the world and put them into large database, that
+                      is later used in many applications.
+                  </p>
               </div>
           </div>
       </div>

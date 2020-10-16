@@ -59,18 +59,18 @@ export default class Navbar extends Component {
                 My projects
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="Hobbies"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Hobbies
-              </Link>
-            </li>
+            {/*<li className="nav-item">*/}
+            {/*  <Link*/}
+            {/*    activeClass="active"*/}
+            {/*    to="Hobbies"*/}
+            {/*    spy={true}*/}
+            {/*    smooth={true}*/}
+            {/*    offset={-70}*/}
+            {/*    duration={500}*/}
+            {/*  >*/}
+            {/*    Hobbies*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
             <li className="nav-item">
               <Link
                 activeClass="active"
