@@ -16,7 +16,7 @@
   width: 60px;
 }
 
-.agh-logo {
+.pictures-in-carousel {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -70,6 +70,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
+  flex-direction: row;
 }
 
 .about-me-logo {
@@ -84,6 +85,20 @@
   font-size: 16px;
 }
 
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-element {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (max-width: 600px) {
   .nav {

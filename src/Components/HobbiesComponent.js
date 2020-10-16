@@ -10,7 +10,7 @@ export default function Hobbies() {
                   <p>In this section I will talk more about hobbies</p>
                   <h1>Snowboard</h1>
                   <p>I love snowboarding, it is one of my biggest passion</p>
-                  <img src={snowboard} width="500"/>
+                  <img src={snowboard} width="500" alt="Snowboard"/>
               </div>
           </div>
       </div>
