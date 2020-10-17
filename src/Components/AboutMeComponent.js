@@ -35,12 +35,14 @@ export default function AboutMe() {
     return (
         <div className="AboutMe">
             <div className="section-content">
-                <h1>Hi, I'm Tomasz</h1>
-                <img src={my_photo} height={300} className="my-photo" alt="My face"/>
-                <p>A delevoper from Gdańsk, Poland. I love creating products, that people can benefit from.</p>
-                <AboutMeCarouselComponent />
-                <h1>Technologies</h1>
-                {create_table()}
+                <h1 className="hi-text">Hi, I'm Tomasz</h1>
+                <div className="photo-with-about-me-text">
+                    <p className="about-me-text">A delevoper from Gdańsk, Poland.</p>
+                    {/*<img src={my_photo} height={300} className="my-photo" alt="My face"/>*/}
+                    {/*<AboutMeCarouselComponent />*/}
+                    {/*<h1>Technologies</h1>*/}
+                    {/*{create_table()}*/}
+                </div>
             </div>
         </div>
     );

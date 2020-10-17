@@ -2,54 +2,37 @@
   --off-white: #fafafa;
 }
 .nav {
-  background-color: var(--off-white);
   position: sticky;
   top: 0px;
   width: 100%;
   height: 80px;
   z-index: 1000;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+  background:linear-gradient(lightblue,transparent);
+  background-color: white /*this your primary color*/
 }
 
-.nav-logo {
-  height: 60px;
-  width: 60px;
+.nav-menu-button {
+  color: lightblue;
+  display: none;
 }
 
-.pictures-in-carousel {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-photo {
-  display: block;
-  margin-left: auto;
-  margin-right: 10px;
-  float: right;
-}
-
-.nav-logo:hover {
+.nav-menu-button:hover {
   cursor: pointer;
 }
 
 .nav .nav-content {
-  max-width: 900px;
-  padding: 0rem 3rem;
+  max-width: 1200px;
+  padding: 3rem 3rem;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 100%;
 }
 
-.nav-items {
-  display: flex;
-}
-
 .nav-item {
   display: inline;
-  margin-left: 2rem;
   color: #333;
 }
 
@@ -58,7 +41,15 @@
   cursor: pointer;
 }
 
-.section {
+.nav-items {
+  display: flex;
+  align-content: center;
+}
+
+.nav-items.closed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-dark {
@@ -100,6 +91,13 @@
   justify-content: center;
 }
 
+.pictures-in-carousel {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 @media screen and (max-width: 600px) {
   .nav {
     height: auto; /* overrides the height of 80px set for large screens */
@@ -110,8 +108,12 @@
   }
 
   .nav-items.closed {
-    /* when toggled, hide the main nav*/
     display: none;
+  }
+
+  .nav-menu-button {
+    color: lightblue;
+    display: flex;
   }
 
   .nav-items.opened {
@@ -124,3 +126,36 @@
   }
 }
 
+/*About me component*/
+
+.photo-with-about-me-text {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.my-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.hi-text {
+  font-size: 50px;
+  color: lightblue;
+  text-shadow: 2px 2px 8px blue;
+}
+
+.about-me-text {
+  font-size: 25px;
+  color: lightblue;
+  text-shadow: 2px 2px 8px blue;
+}
+
+.AboutMe {
+  background-image: url("Images/background.jpg");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

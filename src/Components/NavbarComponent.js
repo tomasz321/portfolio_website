@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Button } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -24,12 +27,7 @@ export default class Navbar extends Component {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
-          <img
-            src={logo}
-            className="nav-logo"
-            alt="Logo"
-            onClick={this.toggle.bind(this)}
-          />
+          <FontAwesomeIcon icon={faBars} className="nav-menu-button" onClick={this.toggle.bind(this)} size='3x'/>
           <ul
               className={
                 "nav-items " + (this.state.opened ? "opened" : "closed")
@@ -44,7 +42,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                About me
+                <Button outline color="info">About Me</Button>{' '}
               </Link>
             </li>
             <li className="nav-item">
@@ -56,7 +54,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                My projects
+                <Button outline color="info">My projects</Button>{' '}
               </Link>
             </li>
             {/*<li className="nav-item">*/}
@@ -74,13 +72,13 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="Contact"
+                to="contact"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
               >
-                Contact
+                <Button outline color="info">Contact</Button>{' '}
               </Link>
             </li>
           </ul>
