@@ -26,62 +26,54 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="nav" id="navbar">
-        <div className="nav-content">
-          <FontAwesomeIcon icon={faBars} className="nav-menu-button" onClick={this.toggle.bind(this)} size='3x'/>
-          <ul
-              className={
-                "nav-items " + (this.state.opened ? "opened" : "closed")
-              }
+        <FontAwesomeIcon icon={faBars} className="nav-menu-button" onClick={this.toggle.bind(this)} size='3x'/>
+        <div
+            className={
+              "nav-items." + (this.state.opened ? "opened" : "closed")
+            }
+        >
+          <Link
+            activeClass="active"
+            to="AboutMe"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
           >
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="AboutMe"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <Button outline color="info">About Me</Button>{' '}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="MyProjects"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <Button outline color="info">My projects</Button>{' '}
-              </Link>
-            </li>
-            {/*<li className="nav-item">*/}
-            {/*  <Link*/}
-            {/*    activeClass="active"*/}
-            {/*    to="Hobbies"*/}
-            {/*    spy={true}*/}
-            {/*    smooth={true}*/}
-            {/*    offset={-70}*/}
-            {/*    duration={500}*/}
-            {/*  >*/}
-            {/*    Hobbies*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <Button outline color="info">Contact</Button>{' '}
-              </Link>
-            </li>
-          </ul>
+            <Button outline color="info">About Me</Button>{' '}
+          </Link>
+          <Link
+            activeClass="active"
+            to="MyProjects"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <Button outline color="info">My projects</Button>{' '}
+          </Link>
+        {/*<li className="nav-item">*/}
+        {/*  <Link*/}
+        {/*    activeClass="active"*/}
+        {/*    to="Hobbies"*/}
+        {/*    spy={true}*/}
+        {/*    smooth={true}*/}
+        {/*    offset={-70}*/}
+        {/*    duration={500}*/}
+        {/*  >*/}
+        {/*    Hobbies*/}
+        {/*  </Link>*/}
+        {/*</li>*/}
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <Button outline color="info">Contact</Button>{' '}
+          </Link>
         </div>
       </nav>
     );

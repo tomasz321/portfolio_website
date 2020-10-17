@@ -11,9 +11,9 @@ export default function Contact() {
               </div>
           </div>
           <div className="social-media-icons">
-              <SocialIcon classnName="social-media-icon" url="https://www.linkedin.com/in/tomasz-dentko-40a8b6160/" />
-              <SocialIcon classnName="social-media-icon" url="https://github.com/tomasz321" />
-              <SocialIcon classnName="social-media-icon" url="mailto:tomaszdentko@gmail.com" />
+              <SocialIcon className="social-media-icon" url="https://www.linkedin.com/in/tomasz-dentko-40a8b6160/" />
+              <SocialIcon className="social-media-icon" url="https://github.com/tomasz321" />
+              <SocialIcon className="social-media-icon" url="mailto:tomaszdentko@gmail.com" />
           </div>
       </div>
   );

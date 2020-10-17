@@ -17,9 +17,12 @@ import pycharm_logo from "../icons/pycharm/pycharm-original.svg";
 import python_logo from "../icons/python/python-original.svg";
 import slack_logo from "../icons/slack/slack-original.svg";
 
+import HelloGrow from "./HelloGrowComponent";
+import PhotoGrow from "./PhotoGrowComponent";
+import InformationGrow from "./InformationGrowComponent";
 
 
-export default function AboutMe() {
+export default function AboutMe(){
 
     function create_table() {
         const logos = [postgres_logo, bitbucket_logo, bootstrap_logo, django_logo, docker_logo, git_logo, github_logo,
@@ -35,13 +38,12 @@ export default function AboutMe() {
     return (
         <div className="AboutMe">
             <div className="section-content">
-                <h1 className="hi-text">Hi, I'm Tomasz</h1>
-                <div className="photo-with-about-me-text">
-                    <p className="about-me-text">A delevoper from Gdańsk, Poland.</p>
-                    {/*<img src={my_photo} height={300} className="my-photo" alt="My face"/>*/}
-                    {/*<AboutMeCarouselComponent />*/}
-                    {/*<h1>Technologies</h1>*/}
-                    {/*{create_table()}*/}
+                <div className="grow-elements">
+                    <PhotoGrow />
+                    <HelloGrow />
+                </div>
+                <div className="grow-info-wstepne">
+                    <InformationGrow />
                 </div>
             </div>
         </div>
