@@ -1,81 +1,97 @@
+/** @jsx jsx */
 import React, { Component } from "react";
-import logo from "../logo.svg";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { Button } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-scroll";
+import {Button} from "reactstrap";
+import { jsx, css } from '@emotion/core'
 
-export default class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      opened: false
+const navbar_button_style = css`
+  margin: 15px;
+`
+
+export default class NavbarComponent extends Component {
+    render() {
+        return(
+            <div
+                css={{
+                    backgroundColor: '#333',
+                    color: 'white',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    position: 'fixed',
+                    width: '100%',
+                    zIndex: '1',
+                    padding: '10px'
+                }}
+            >
+                <div>
+                <Link css={navbar_button_style}
+                        activeClass="active"
+                        to="AboutMe"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        <Button outline color="light">About Me</Button>{' '}
+                    </Link>
+                </div>
+                <div>
+                    <Link css={navbar_button_style}
+                        activeClass="active"
+                        to="MyProjects"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        <Button outline color="light">My projects</Button>{' '}
+                    </Link>
+                </div>
+                <div>
+                    <Link css={navbar_button_style}
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        <Button outline color="light">Contact</Button>{' '}
+                    </Link>
+            </div>
+            </div>
+            // <Navbar bg="light" expand="lg" >
+            //     <Link
+            //         activeClass="active"
+            //         to="AboutMe"
+            //         spy={true}
+            //         smooth={true}
+            //         offset={-70}
+            //         duration={500}
+            //     >
+            //         <Button outline color="dark">About Me</Button>{' '}
+            //     </Link>
+            //     <Link
+            //         activeClass="active"
+            //         to="MyProjects"
+            //         spy={true}
+            //         smooth={true}
+            //         offset={-70}
+            //         duration={500}
+            //     >
+            //         <Button outline color="dark">My projects</Button>{' '}
+            //     </Link>
+            //     <Link
+            //         activeClass="active"
+            //         to="contact"
+            //         spy={true}
+            //         smooth={true}
+            //         offset={-70}
+            //         duration={500}
+            //     >
+            //         <Button outline color="dark">Contact</Button>{' '}
+            //     </Link>
+            // </Navbar>
+        )
     }
-  }
-
-  toggle() {
-    this.setState({
-      opened: !this.state.opened
-    });
-  }
-
-  scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
-  render() {
-    return (
-      <nav className="nav" id="navbar">
-        <FontAwesomeIcon icon={faBars} className="nav-menu-button" onClick={this.toggle.bind(this)} size='3x'/>
-        <div
-            className={
-              "nav-items." + (this.state.opened ? "opened" : "closed")
-            }
-        >
-          <Link
-            activeClass="active"
-            to="AboutMe"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            <Button outline color="info">About Me</Button>{' '}
-          </Link>
-          <Link
-            activeClass="active"
-            to="MyProjects"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            <Button outline color="info">My projects</Button>{' '}
-          </Link>
-        {/*<li className="nav-item">*/}
-        {/*  <Link*/}
-        {/*    activeClass="active"*/}
-        {/*    to="Hobbies"*/}
-        {/*    spy={true}*/}
-        {/*    smooth={true}*/}
-        {/*    offset={-70}*/}
-        {/*    duration={500}*/}
-        {/*  >*/}
-        {/*    Hobbies*/}
-        {/*  </Link>*/}
-        {/*</li>*/}
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            <Button outline color="info">Contact</Button>{' '}
-          </Link>
-        </div>
-      </nav>
-    );
-  }
 }

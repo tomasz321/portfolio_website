@@ -17,10 +17,9 @@ import pycharm_logo from "../icons/pycharm/pycharm-original.svg";
 import python_logo from "../icons/python/python-original.svg";
 import slack_logo from "../icons/slack/slack-original.svg";
 
-import HelloGrow from "./HelloGrowComponent";
-import PhotoGrow from "./PhotoGrowComponent";
-import InformationGrow from "./InformationGrowComponent";
-
+import HelloGrow from "./GrowComponents/HelloGrowComponent";
+import PhotoGrow from "./GrowComponents/PhotoGrowComponent";
+import InformationGrow from "./GrowComponents/InformationGrowComponent";
 
 export default function AboutMe(){
 

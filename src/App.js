@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavbarComponent from "./Components/NawbarComponent";
+import NavbarComponent from "./Components/NavbarComponent";
 import AboutMe from "./Components/AboutMeComponent";
 import MyProjects from "./Components/MyProjectsComponent";
 import Contact from "./Components/ContactComponent";
