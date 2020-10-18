@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavbarComponent from "./Components/NewNawbarComponent";
+import NavbarComponent from "./Components/NawbarComponent";
 import AboutMe from "./Components/AboutMeComponent";
 import MyProjects from "./Components/MyProjectsComponent";
 import Contact from "./Components/ContactComponent";
@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavbarComponent sticky="top" />
+        <NavbarComponent />
         <AboutMe />
         <MyProjects />
         {/*<Hobbies />*/}
